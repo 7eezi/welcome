@@ -17,6 +17,17 @@ bot.on(`ready`, () => {
   console.log(`Logged in as ${bot.user.tag}!`);
   bot.user.setStatus("online")
 });
+
+
+
+
+client.on('ready', () => {
+  client.user.setGame(` Welcome Bot (: `, 'https://www.twitch.tv/hi');
+console.log('BOT ONLINE');
+});
+
+
+
 bot.on("guildMemberAdd", (member) => { //هذي يوم يستنى الشخص يدخل السيرفر عشان يعطيه الرتبة
   console.log(member.user.username + " Joined " + member.guild.name);
   if (bot.codes[member.guild.id] === undefined) return console.log("Use the setrole command")
